@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        [data-bs-theme="dark"] body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        [data-bs-theme="light"] body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <button id="darkModeToggle" class="btn btn-primary">Toggle Dark Mode</button>
+    </div>
+
+    <script>
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            let htmlElement = document.documentElement;
+            if (htmlElement.getAttribute('data-bs-theme') === 'dark') {
+                htmlElement.setAttribute('data-bs-theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-bs-theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
+
