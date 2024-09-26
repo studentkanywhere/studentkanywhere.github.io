@@ -8,14 +8,41 @@
 </head>
 <body>
 
+<audio id="audioo" src="sounds/clap.wav"></audio>
+
+<button onclick = "clickQ();"> Q</button>
+<script>
+function clickQ(){
+ var sound = document.getElementById('audioo');
+sound.play();
+console.log(sound);
+};
+</script>
+
+<audio id="audiooo" src="sounds/hihat.wav"></audio>
+
+<script>
+function clickW(){
+ var sound = document.getElementById('audiooo');
+sound.play();
+console.log(sound);
+};
+</script>
+
+
+
+<button onclick = "clickQ();"> E</button>
+<button onclick = "clickQ();"> R</button>
+<button onclick = "clickQ();"> T</button>
+<button onclick = "clickQ();"> Y</button>
 
   <div class="keys">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
+    <div data-key="81" class="key">
+      <kbd><button onclick = "clickQ();"> Q</button></kbd>
       <span class="sound">clap</span>
     </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
+    <div data-key="87" class="key">
+      <kbd><button onclick = "clickW();"> W</button></kbd>
       <span class="sound">hihat</span>
     </div>
     <div data-key="68" class="key">
